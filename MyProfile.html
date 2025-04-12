@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalukurthi Gowri Sankar Reddy - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #00c3ff;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid #00c3ff;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    ul li::before {
+      content: '\2022';
+      color: #00c3ff;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    a {
+      color: #00c3ff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px #00c3ff;
+    }
+
+    .project {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 5px solid #00c3ff;
+      transition: 0.4s;
+    }
+
+    .project:hover {
+      background: rgba(0, 195, 255, 0.1);
+    }
+
+    .contact-info {
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      color: #ccc;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kalukurthi Gowri Sankar Reddy</h1>
+    <p>Portfolio Website | B.Tech CSE | RGUKT RK Valley</p>
+  </header>
+
+  <section>
+    <h2>Career Objective</h2>
+    <p>I am a passionate Computer Science student at RGUKT RK Valley, with a strong interest in full-stack development, AI, and emerging technologies. I love working on innovative tech projects that solve real-world problems. My journey started with Java web apps in my first year, and I’ve been hooked ever since.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming Languages: Java, SQL, Python, C</li>
+      <li>Web Technologies: HTML, CSS, JavaScript</li>
+      <li>Frameworks & Tools: Spring Boot, VSCode, Postman, REST APIs</li>
+      <li>Databases: MySQL, Firebase</li>
+      <li>Version Control: Git, GitHub</li>
+      <li>Soft Skills: Team Worker, Good Communication</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Judiciary Information System</h3>
+      <p>Developed a case management system to track cases, manage judgments, and generate reports. Designed the front-end using JSP, and implemented business logic with Servlets. Included role-based access control for Judges, Advocates, and Clerks.</p>
+      <p><a href="#">View Project</a></p>
+    </div>
+
+    <div class="project">
+      <h3>Mess Complaint Management System (Mobile App)</h3>
+      <p>Built a React Native mobile app enabling students to lodge and monitor mess-related complaints. Integrated Firebase for real-time notifications and database operations, with a user-friendly UI/UX.</p>
+      <p><a href="#">View Project</a></p>
+    </div>
+
+    <div class="project">
+      <h3>Online Auction System (Ongoing)</h3>
+      <p>A Spring Boot-powered auction platform featuring secure authentication, real-time bidding using WebSockets, and integration of payment APIs. Currently under development to provide a seamless and competitive auction experience.</p>
+      <p><a href="#">View Project</a></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>Spring Boot & Microservices - Udemy</li>
+      <li>Machine Learning - EdX Course</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Achievements</h2>
+    <ul>
+      <li>Secured 3rd Place in University-Level Hackathon (2025)</li>
+      <li>Maintained 9.5 CGPA throughout B.Tech</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Co-Curricular Activities</h2>
+    <ul>
+      <li>Participated in multiple online hackathons</li>
+      <li>Actively participated in technical events</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech in Computer Science Engineering</strong> – RGUKT RK Valley (2022-2026) – CGPA: 9.5/10</li>
+      <li><strong>Pre-University Course</strong> – RGUKT RK Valley (2020-2022) – CGPA: 9.92/10</li>
+      <li><strong>SSC</strong> – K.C. Narayana High School, Guntakal – CGPA: 10/10</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:kalukurthi2005@gmail.com">kalukurthi2005@gmail.com</a></p>
+      <p>Phone: 6281185068</p>
+      <p>
+        LinkedIn: <a href="https://www.linkedin.com/in/gowri-sankar-reddy-k-b70755280" target="_blank">linkedin.com/in/gowri-sankar-reddy</a><br>
+        GitHub: <a href="https://github.com/Sankar1217" target="_blank">github.com/Sankar1217</a><br>
+        HackerRank: <a href="https://www.hackerrank.com/profile/rr200361" target="_blank">hackerrank.com/rr200361</a><br>
+        Leetcode: <a href="https://leetcode.com/u/gowri_sankar_reddy/" target="_blank">leetcode.com/u/gowri_sankar_reddy</a><br>
+        GeeksForGeeks: <a href="https://www.geeksforgeeks.org/user/kalukurt5i71/" target="_blank">geeksforgeeks.org/user/kalukurt5i71</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Kalukurthi Gowri Sankar Reddy | Portfolio Website
+  </footer>
+</body>
+</html>
+
