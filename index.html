@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalukurthi Gowri Sankar Reddy - Portfolio</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -37,6 +36,11 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 1.5rem;
             margin-bottom: 1.5rem;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Added for hover effect */
+        }
+        .card:hover { /* Added subtle hover effect for cards */
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
         }
         .nav-link {
             transition: color 0.3s ease;
@@ -44,56 +48,55 @@
         .nav-link:hover {
             color: #3498db; /* Blue accent on hover */
         }
+        .nav-link.active { /* Style for active navigation link */
+            color: #3498db;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation -->
     <header class="bg-white shadow-md py-4 px-6 md:px-12 fixed w-full z-10">
         <nav class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-gray-800">K. Gowri Sankar Reddy</a>
             <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-blue-500 nav-link">About</a>
-                <a href="#experience" class="text-gray-600 hover:text-blue-500 nav-link">Experience</a>
-                <a href="#education" class="text-gray-600 hover:text-blue-500 nav-link">Education</a>
-                <a href="#skills" class="text-gray-600 hover:text-blue-500 nav-link">Skills</a>
-                <a href="#projects" class="text-gray-600 hover:text-blue-500 nav-link">Projects</a>
-                <a href="#achievements" class="text-gray-600 hover:text-blue-500 nav-link">Achievements</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-500 nav-link">Contact</a>
+                <a href="#about" class="text-gray-600 nav-link">About</a>
+                <a href="#experience" class="text-gray-600 nav-link">Experience</a>
+                <a href="#education" class="text-gray-600 nav-link">Education</a>
+                <a href="#skills" class="text-gray-600 nav-link">Skills</a>
+                <a href="#projects" class="text-gray-600 nav-link">Projects</a>
+                <a href="#achievements" class="text-gray-600 nav-link">Achievements</a>
+                <a href="#contact" class="text-gray-600 nav-link">Contact</a>
             </div>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </nav>
-        <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-20 flex flex-col items-center justify-center space-y-6 text-xl">
             <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-600 focus:outline-none">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
-            <a href="#about" class="text-gray-800 hover:text-blue-500 nav-link" onclick="toggleMobileMenu()">About</a>
-            <a href="#experience" class="text-gray-800 hover:text-blue-500 nav-link" onclick="toggleMobileMenu()">Experience</a>
-            <a href="#education" class="text-gray-800 hover:text-blue-500 nav-link" onclick="toggleMobileMenu()">Education</a>
-            <a href="#skills" class="text-gray-800 hover:text-blue-500 nav-link" onclick="toggleMobileMenu()">Skills</a>
-            <a href="#projects" class="text-gray-800 hover:text-blue-500 nav-link" onclick="toggleMobileMenu()">Projects</a>
-            <a href="#achievements" class="text-gray-800 hover:text-blue-500 nav-link" onclick="toggleMobileMenu()">Achievements</a>
-            <a href="#contact" class="text-gray-800 hover:text-blue-500 nav-link" onclick="toggleMobileMenu()">Contact</a>
+            <a href="#about" class="text-gray-800 nav-link" onclick="toggleMobileMenu()">About</a>
+            <a href="#experience" class="text-gray-800 nav-link" onclick="toggleMobileMenu()">Experience</a>
+            <a href="#education" class="text-gray-800 nav-link" onclick="toggleMobileMenu()">Education</a>
+            <a href="#skills" class="text-gray-800 nav-link" onclick="toggleMobileMenu()">Skills</a>
+            <a href="#projects" class="text-gray-800 nav-link" onclick="toggleMobileMenu()">Projects</a>
+            <a href="#achievements" class="text-gray-800 nav-link" onclick="toggleMobileMenu()">Achievements</a>
+            <a href="#contact" class="text-gray-800 nav-link" onclick="toggleMobileMenu()">Contact</a>
         </div>
     </header>
 
     <main class="pt-20 container mx-auto px-6 py-8 md:py-12">
 
-        <!-- About Section -->
         <section id="about" class="py-12 md:py-16">
             <h2 class="section-title">About Me</h2>
             <div class="flex flex-col md:flex-row items-center md:space-x-8">
                 <div class="flex-shrink-0 mb-6 md:mb-0">
-                    <!-- Replace this placeholder with your professional photo -->
-                    <img src="/IMG_20241110_153819.jpg" alt="Your Photo" class="w-48 h-48 rounded-full object-cover shadow-lg">
+                    <img src="/IMG_20241110_153819.jpg" alt="Kalukurthi Gowri Sankar Reddy's professional headshot" class="w-48 h-48 rounded-full object-cover shadow-lg">
                 </div>
                 <div class="text-lg leading-relaxed text-gray-700">
                     <p class="mb-4">
@@ -109,7 +112,6 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="py-12 md:py-16">
             <h2 class="section-title">Experience</h2>
             <div class="space-y-8">
@@ -136,7 +138,6 @@
             </div>
         </section>
 
-        <!-- Education Section -->
         <section id="education" class="py-12 md:py-16">
             <h2 class="section-title">Education</h2>
             <div class="space-y-8">
@@ -161,13 +162,12 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="py-12 md:py-16">
             <h2 class="section-title">Skills</h2>
             <div class="card">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 text-lg">
                     <div>
-                        <h4 class="font-semibold text-xl mb-2 text-gray-800">Languages:</h4>
+                        <h4 class="font-semibold text-xl mb-2 text-gray-800"> Programming Languages:</h4>
                         <ul class="list-disc list-inside space-y-1">
                             <li>Java</li>
                             <li>C</li>
@@ -229,7 +229,6 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="py-12 md:py-16">
             <h2 class="section-title">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -237,42 +236,34 @@
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">MediTrackLite - Smart Medical Appointment System</h3>
                     <p class="text-gray-600 mb-3">Developed a full-stack web and mobile-based healthcare platform with patient, doctor, and admin roles. Features include real-time video consultations, chat, feedback system, medical history timeline, doctor analytics, and file uploads. Implemented concurrency-safe appointment booking, prescription generation, and scheduler-based auto-rejection.</p>
                     <p class="text-sm text-gray-500 mb-3">Technologies: Spring Boot, React, MySQL, WebSockets, Google Drive API</p>
-                    <!-- IMPORTANT: Replace '#' with actual Live Demo link -->
-                    <a href="https://meditrack-frontend-p0sd.onrender.com/" class="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                    <span class="text-gray-400 mx-2">|</span>
-                    <!-- IMPORTANT: Replace '#' with actual GitHub Repo link -->
-                    <a href="https://github.com/Sankar1217/MediTrackLite" class="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-                    <!-- TIP: Add quantifiable achievements (e.g., "improved appointment booking efficiency by X%"). -->
-                    <!-- TIP: Describe technical challenges faced and how you overcame them. -->
-                    <!-- TIP: Consider adding screenshots or a GIF of the project in action. -->
+                    <div class="flex flex-wrap gap-3 mt-4">
+                        <a href="https://meditrack-frontend-p0sd.onrender.com/" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <a href="https://github.com/Sankar1217/MediTrackLite" class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                    </div>
                 </div>
                 <div class="card">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">Mess Complaint Management System</h3>
                     <p class="text-gray-600 mb-3">Developed a web-based platform for managing student complaints, feedback, and menu change notifications in hostel mess operations. Enables students to raise issues or suggest changes while providing admin tools for tracking complaints and sending notifications. Streamlined mess administration by digitizing communication between students and the mess committee.</p>
                     <p class="text-sm text-gray-500 mb-3">Technologies: React Native, Firebase, Node.Js</p>
-                    <!-- IMPORTANT: Replace '#' with actual Live Demo link if available -->
-                    
-                    <a href="https://github.com/RamEswar78/mess-management-system-be" class="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-                    <!-- TIP: Add quantifiable achievements (e.g., "reduced complaint resolution time by X%"). -->
-                    <!-- TIP: Describe technical challenges faced and how you overcame them. -->
-                    <!-- TIP: Consider adding screenshots or a GIF of the project in action. -->
+                    <div class="flex flex-wrap gap-3 mt-4">
+                        <a href="https://github.com/RamEswar78/mess-management-system-be" class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                    </div>
                 </div>
                 <div class="card">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Live Cricket Score App (CREX-inspired) (In Progress)</h3>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Live Cricket Score App (CREX-inspired) <span class="text-sm font-normal text-gray-500">(In Progress)</span></h3>
                     <p class="text-gray-600 mb-3">Building a real-time cricket scoring app with live match updates, player/team management, and tournament fixtures. Includes local tournament registration with team and player management, automated fixtures, and live match updates. Features player stats, points table, win probability, and tournament-wise analytics for organizers and fans. Features include AI-based automatic fixture generation, win probability, and tournament-wise player stats.</p>
                     <p class="text-sm text-gray-500 mb-3">Technologies: Spring Boot, React Native, MySQL, Web sockets</p>
-                    
+                    <p class="text-sm text-gray-500 mt-2"><em>Status: Currently in active development, focusing on core real-time functionalities.</em></p>
                 </div>
                 <div class="card">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Smart Research Assistant - Chrome Extension (Prototype Stage)</h3>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Smart Research Assistant - Chrome Extension <span class="text-sm font-normal text-gray-500">(Prototype Stage)</span></h3>
                     <p class="text-gray-600 mb-3">Design a Chrome extension that uses LLM APIs to summarize text/images, explain concepts, and solve MCQs in real-time. Includes features like note saving, PDF/TXT export, and JWT + Google OAuth2 authentication.</p>
                     <p class="text-sm text-gray-500 mb-3">Technologies: Spring Boot, Gemini API, Chrome Extension JS, Google OAuth2</p>
-                
+                    <p class="text-sm text-gray-500 mt-2"><em>Status: Currently prototyping key features and API integrations.</em></p>
                 </div>
             </div>
         </section>
 
-        <!-- Achievements & Certifications Section -->
         <section id="achievements" class="py-12 md:py-16">
             <h2 class="section-title">Achievements & Certifications</h2>
             <div class="card">
@@ -285,7 +276,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-12 md:py-16">
             <h2 class="section-title">Contact Me</h2>
             <div class="card max-w-2xl mx-auto text-center">
@@ -304,7 +294,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6 text-center">
         <p>&copy; 2025 Kalukurthi Gowri Sankar Reddy. All rights reserved.</p>
     </footer>
@@ -326,11 +315,51 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         function toggleMobileMenu() {
-            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            // Update aria-expanded attribute for accessibility
+            mobileMenuButton.setAttribute('aria-expanded', !isHidden);
         }
 
         mobileMenuButton.addEventListener('click', toggleMobileMenu);
         closeMobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+
+        // Highlight active navigation link based on scroll position
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100; // Adjust offset as needed
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Set initial active link on page load
+        window.addEventListener('load', () => {
+            const currentHash = window.location.hash;
+            if (currentHash) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === currentHash) {
+                        link.classList.add('active');
+                    }
+                });
+            } else { // If no hash, default to 'About' or first section
+                document.querySelector('a[href="#about"]').classList.add('active');
+            }
+        });
     </script>
 </body>
 </html>
